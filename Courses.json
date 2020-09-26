@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "courseName": "HTML5 & CSS3",
+        "courseDescrption": "Skeleton of web development",
+        "coursePrice": "1000 INR",
+        "courseDuration": "2 months",
+        "image": "https://raw.githubusercontent.com/rahulnag/capscodefiles/master/Image/html5_css3.png?raw=true",
+        "syllabus": ["1:Introduction" ,"2:HTML Element/Tags" ,"3:HTML Attributes","4:Styling HTML","5:HTML Classes and ID","6:HTML Table","7:Iframe","8:HTML Layouts","9:HTML Meta tags","10:Responsive web page","11:HTML ComputerCode","12:HTML Colors/Symbol/Emojis","13:HTML Forms","14:HTML Media(Audio, Video etc.)","15:HTML API's (adding Location etc.)","16:HTML MediaQueries","17:5 Mini Projects"," And many more..."]
+    },
+    {
+        "id": "2",
+        "courseName": "JavaScript",
+        "courseDescrption": "Heart of Web Development",
+        "coursePrice": "2000 INR",
+        "courseDuration": "2 months",
+        "image": "https://raw.githubusercontent.com/rahulnag/capscodefiles/master/Image/javascript.jpg?raw=true",
+        "syllabus": ["1:JS Introduction","2:JS Syntax","3:JS Operator","4:JS Arithmetic","5:JS Data Types and Type casting","6:JS Functions","7:JS Objects","8:JS Events","9:String/ String methods","10:Numbers/Number method","11:Array/Array method","12:JS Boolean","13:JS Condition","14:Different Loops","15: Var, Let, Const","16:Hoisting","17:Scope in JS","18:this Keyword","19: Strict Mode","20: Map, Set etc","21: 3 Project","And many more..."]
+    },
+    {
+        "id": "3",
+        "courseName": "React JS",
+        "courseDescrption": "Amazing JavaScript Framework for Web",
+        "coursePrice": "3000 INR",
+        "courseDuration": "6 months",
+        "image": "https://raw.githubusercontent.com/rahulnag/capscodefiles/master/Image/reactjs.png?raw=true",
+        "syllabus": ["1:What is React","2:Use of React","3:Types of components","4:Components & Props","5:State and Lifecycle","6: Event Handling & Conditional Rendering","7: List in React","8: Inheritance in React","9: Forwarding Refs","10: Context","11:Fragments","12:HOC","13: Portals","14: Portals & Reconciliation","15: ReactDOM and DOM Elements","16: Hooks"]
+    },
+    {
+        "id": "5",
+        "courseName": "Node JS & Express JS",
+        "courseDescrption": "Father of backend",
+        "coursePrice": "3000 INR",
+        "courseDuration": "6 months",
+        "image": "https://raw.githubusercontent.com/rahulnag/capscodefiles/master/Image/node.png?raw=true",
+        "syllabus": ["1: Introduction","2: Modules","3: File System","4: NPM","5: Events","6: Express JS"]
+    },
+    {
+        "id": "6",
+        "courseName": "Git/ GitHub",
+        "courseDescrption": "Management of your Project",
+        "coursePrice": "3000 INR",
+        "courseDuration": "6 months",
+        "image": "https://raw.githubusercontent.com/rahulnag/capscodefiles/master/Image/github.svg?raw=true",
+        "syllabus": ["1: Intoduction","2: Why Git","3: Basic Commands","4: Forking","5: Pull request","6: Merge","7: Working on other open source project","8: Reprositories","And many more..."]
+    },
+    {
+        "id": "7",
+        "courseName": "Python Baics",
+        "courseDescrption": "Amazing Language",
+        "coursePrice": "500 INR",
+        "courseDuration": "3 months",
+        "image": "https://raw.githubusercontent.com/rahulnag/capscodefiles/master/Image/python.png?raw=true",
+        "syllabus": ["1: Introduction","2: Data Types","3: Variables","4: Type casting","5: Operator","6: List, Tuples, Sets","7: Directories","8: Loops","9:Array","10: Modules","11: JSON and File Handling","12: NumPy","13: 2 Basic Project", "And many more..."]
+    }
+]
