@@ -4,4 +4,6 @@
 }
 .NavLink button {
   height: 20px;
+  color: rgb(0 144 99);
+  font-weight: bolder;
 }
