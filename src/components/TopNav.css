@@ -1,0 +1,7 @@
+.NavLink {
+  font-size: 1rem;
+  text-decoration: none;
+}
+.NavLink button {
+  height: 20px;
+}
