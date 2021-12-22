@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const Document = () => {
+const Document = ({ setValue }) => {
+  useEffect(() => {
+    setValue(3);
+  }, []);
+
   return (
     <div>
       <h1>Dcos</h1>

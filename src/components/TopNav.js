@@ -11,9 +11,9 @@ const useStyles = makeStyles({
     flexGrow: 1,
   },
 });
-function TopTab() {
+function TopTab({ value, setValue }) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  // const [value, setValue] = React.useState(0);
 
   const handleChange = (newValue) => {
     setValue(newValue);

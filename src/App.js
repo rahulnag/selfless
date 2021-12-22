@@ -28,19 +28,31 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function App() {
+  const [value, setValue] = React.useState(0);
+
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <CssBaseline />
       <div>
-        <TopTab />
+        <TopTab value={value} setValue={setValue} />
       </div>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/openings" component={Openings} />
-        <Route exact path="/fresherswalkin" component={FresherWalkin} />
-        <Route exact path="/experiencewalkin" component={ExpWalkin} />
-        <Route exact path="/documents" component={Document} />
+        <Route exact path="/">
+          <Home setValue={setValue} />
+        </Route>
+        <Route exact path="/openings">
+          <Openings setValue={setValue} />
+        </Route>
+        <Route exact path="/fresherswalkin">
+          <FresherWalkin setValue={setValue} />
+        </Route>
+        <Route exact path="/experiencewalkin">
+          <ExpWalkin setValue={setValue} />
+        </Route>
+        <Route exact path="/documents">
+          <Document setValue={setValue} />
+        </Route>
       </Switch>
     </div>
   );
