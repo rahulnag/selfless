@@ -13,6 +13,7 @@ import Tab from "@material-ui/core/Tab";
 import About from "../AboutUs/About";
 import { useHistory } from "react-router-dom";
 import homeimage from "./../../assets/Recruitment.png";
+import logo from "./../../assets/logo/selfless_high.png";
 import text from "../../main";
 import Testimonial from "../Testimonial/Testimonial";
 const useStyles = makeStyles((theme) => ({
@@ -65,7 +66,17 @@ function Home() {
   ]);
   return (
     <>
-      <Grid container>
+      <Grid
+        container
+        style={
+          {
+            // backgroundImage: `url(${logo})`,
+            // backgroundRepeat: "no-repeat",
+            // backgroundSize: "500px 500px",
+            // backgroundPosition: "center",
+          }
+        }
+      >
         <Grid xs={12} sm={12} md={6} lg={6} item>
           {" "}
           <Typography className={classes.mainText}>
