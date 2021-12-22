@@ -7,11 +7,13 @@ import backimage from "./wave.svg";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
+
 import { Link } from "react-router-dom";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import About from "../AboutUs/About";
 import { useHistory } from "react-router-dom";
+
 import homeimage from "./../../assets/Recruitment.png";
 import logo from "./../../assets/logo/selfless_high.png";
 import text from "../../main";
@@ -55,15 +57,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Home() {
+function Home({ setValue }) {
   const classes = useStyles();
   const history = useHistory();
-  const F_Walkin = useCallback(() => history.push("/fresherswalkin"), [
-    history,
-  ]);
-  const E_Walkin = useCallback(() => history.push("/experiencewalkin"), [
-    history,
-  ]);
+  const F_Walkin = useCallback(
+    () => history.push("/fresherswalkin"),
+    [history]
+  );
+  const E_Walkin = useCallback(
+    () => history.push("/experiencewalkin"),
+    [history]
+  );
+  useEffect(() => {
+    setValue(0);
+  }, []);
   return (
     <>
       <Grid

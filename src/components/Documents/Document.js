@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import { documents } from "./documents";
 import "./Document.css";
-const Document = () => {
+
+const Document = ({ setValue }) => {
+  useEffect(() => {
+    setValue(3);
+  }, []);
+
   return (
     <div>
       {documents.length > 0 ? (
