@@ -11,7 +11,6 @@ import FresherWalkin from "./components/Walkins/FreshersWalkin";
 import About from "./components/AboutUs/About";
 import Openings from "./components/Openings/Openings";
 import Document from "./components/Documents/Document";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(1),

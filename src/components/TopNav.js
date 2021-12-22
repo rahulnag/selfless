@@ -23,14 +23,14 @@ function TopTab({ value, setValue }) {
     <div className={classes.root}>
       <AppBar
         position="fixed"
-        style={{ backgroundColor: "white" }}
+        style={{ backgroundColor: "#fafafa" }}
         elevation={0}
       >
         <Tabs
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
-          textColor="primary"
+          textColor="#fafafa"
           variant="scrollable" //this is commented as both varient:scrollable and centered will not work together
           scrollButtons="auto" //on
           aria-label="scrollable auto tabs example"
@@ -39,14 +39,21 @@ function TopTab({ value, setValue }) {
           <Link to="/" className="NavLink">
             <Tab label="Home" value={0} onClick={() => handleChange(0)} />
           </Link>
+          <Link to="/testimonails" className="NavLink">
+            <Tab
+              label="Testimonails"
+              value={1}
+              onClick={() => handleChange(1)}
+            />
+          </Link>
           <Link to="/openings" className="NavLink">
-            <Tab label="Jobs" value={1} onClick={() => handleChange(1)} />
+            <Tab label="Jobs" value={2} onClick={() => handleChange(2)} />
           </Link>
           <Link to="/aboutus" className="NavLink">
-            <Tab label="About" value={2} onClick={() => handleChange(2)} />
+            <Tab label="About" value={3} onClick={() => handleChange(3)} />
           </Link>
           <Link to="/documents" className="NavLink">
-            <Tab label="Docs" value={3} onClick={() => handleChange(3)} />
+            <Tab label="Docs" value={4} onClick={() => handleChange(4)} />
           </Link>
         </Tabs>
       </AppBar>

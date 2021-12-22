@@ -14,6 +14,10 @@ import Tab from "@material-ui/core/Tab";
 import About from "../AboutUs/About";
 import { useHistory } from "react-router-dom";
 
+import homeimage from "./../../assets/Recruitment.png";
+import logo from "./../../assets/logo/selfless_high.png";
+import text from "../../main";
+import Testimonial from "../Testimonial/Testimonial";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(1),
@@ -28,24 +32,27 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mainText: {
-    fontFamily: '"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
-    textShadow: "2px 2px 5px red",
-    border: "red",
+    color: "#2C3335",
+    fontFamily: "cursive",
+    textShadow: "2px 2px 5px #1ba67b",
+    border: "#0bdd9c",
+    // textAlign: "center",
+    marginTop: "20px",
     [theme.breakpoints.up("xs")]: {
-      fontSize: "5em",
+      fontSize: "3em",
       // color: 'green'
     },
 
     [theme.breakpoints.up("sm")]: {
-      fontSize: "4em",
+      fontSize: "3em",
       // color: 'blue'
     },
     [theme.breakpoints.between("sm", "md")]: {
-      fontSize: "7em",
+      fontSize: "4em",
       // color: 'red'
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "9em",
+      fontSize: "5em",
     },
   },
 }));
@@ -61,39 +68,60 @@ function Home({ setValue }) {
     () => history.push("/experiencewalkin"),
     [history]
   );
-
   useEffect(() => {
     setValue(0);
   }, []);
-
   return (
-    <Grid container>
+    <>
       <Grid
         container
-        style={{
-          height: "100vh",
-          width: "100%",
-          backgroundImage: `url(${backimage})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        style={
+          {
+            // backgroundImage: `url(${logo})`,
+            // backgroundRepeat: "no-repeat",
+            // backgroundSize: "500px 500px",
+            // backgroundPosition: "center",
+          }
+        }
       >
-        <Typography className={classes.mainText}>
-          WELCOME TO SELFLESS FAMILY
-        </Typography>
+        <Grid xs={12} sm={12} md={6} lg={6} item>
+          {" "}
+          <Typography className={classes.mainText}>
+            {text.homepageText}
+          </Typography>
+          <div
+            style={{
+              color: "rgb(44 51 53 / 78%)",
+              backgroundColor: "rgb(218 224 226 / 26%)",
+              width: "70%",
+              fontSize: "1.5rem",
+              textAlign: "center",
+              borderRadius: "30px",
+              pdding: "7px",
+              marginTop: "16px",
+            }}
+          >
+            {text.hintText}
+          </div>
+        </Grid>
+        <Grid
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
+          item
+          style={{
+            height: "95vh",
+            width: "100%",
+            backgroundImage: `url(${homeimage})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></Grid>
       </Grid>
-      <div style={{ height: "100vh", width: "100%", padding: "20px" }}>
-        <Typography variant="h3">Our Happy Students</Typography>
-      </div>
-      {/* TESTING ROUTING BUTTONS */}
-      {/* <Button variant="contained" color="primary" onClick={()=> F_Walkin()}>
-        Primary
-      </Button>
-      <Button variant="contained" color="primary" onClick={()=> E_Walkin()}>
-        Primary
-      </Button> */}
-    </Grid>
+      <Testimonial />
+    </>
   );
 }
 
