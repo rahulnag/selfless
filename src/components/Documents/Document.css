@@ -1,5 +1,9 @@
 .CourseLink {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  height: 120px;
+  padding: 8px;
+  /* background-color: rgb(228, 223, 223);
+  border: 1px solid black; */
+}
+.MuiDivider-light {
+  background-color: rgb(141 141 141 / 8%) !important;
 }

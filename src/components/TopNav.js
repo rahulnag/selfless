@@ -23,7 +23,11 @@ function TopTab({ value, setValue }) {
     <div className={classes.root}>
       <AppBar
         position="fixed"
-        style={{ backgroundColor: "#fafafa" }}
+        style={{
+          backgroundColor: "#fafafa",
+          boxShadow:
+            "0px 0px 0px -1px rgb(0 0 0 / 10%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)",
+        }}
         elevation={0}
       >
         <Tabs
@@ -31,29 +35,22 @@ function TopTab({ value, setValue }) {
           onChange={handleChange}
           indicatorColor="primary"
           textColor="#fafafa"
-          variant="scrollable" //this is commented as both varient:scrollable and centered will not work together
+          // variant="scrollable" //this is commented as both varient:scrollable and centered will not work together
           scrollButtons="auto" //on
           aria-label="scrollable auto tabs example"
-          // centered="true"
+          centered="true"
         >
           <Link to="/" className="NavLink">
             <Tab label="Home" value={0} onClick={() => handleChange(0)} />
           </Link>
-          <Link to="/testimonails" className="NavLink">
-            <Tab
-              label="Testimonails"
-              value={1}
-              onClick={() => handleChange(1)}
-            />
-          </Link>
           <Link to="/openings" className="NavLink">
-            <Tab label="Jobs" value={2} onClick={() => handleChange(2)} />
+            <Tab label="Jobs" value={1} onClick={() => handleChange(1)} />
           </Link>
           <Link to="/aboutus" className="NavLink">
-            <Tab label="About" value={3} onClick={() => handleChange(3)} />
+            <Tab label="About" value={2} onClick={() => handleChange(2)} />
           </Link>
           <Link to="/documents" className="NavLink">
-            <Tab label="Docs" value={4} onClick={() => handleChange(4)} />
+            <Tab label="Docs" value={3} onClick={() => handleChange(3)} />
           </Link>
         </Tabs>
       </AppBar>
