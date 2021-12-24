@@ -60,14 +60,12 @@ const useStyles = makeStyles((theme) => ({
 function Home({ setValue }) {
   const classes = useStyles();
   const history = useHistory();
-  const F_Walkin = useCallback(
-    () => history.push("/fresherswalkin"),
-    [history]
-  );
-  const E_Walkin = useCallback(
-    () => history.push("/experiencewalkin"),
-    [history]
-  );
+  const F_Walkin = useCallback(() => history.push("/fresherswalkin"), [
+    history,
+  ]);
+  const E_Walkin = useCallback(() => history.push("/experiencewalkin"), [
+    history,
+  ]);
   useEffect(() => {
     setValue(0);
   }, []);
@@ -97,7 +95,7 @@ function Home({ setValue }) {
               fontSize: "1.5rem",
               textAlign: "center",
               borderRadius: "30px",
-              pdding: "7px",
+              // padding: "7px",
               marginTop: "16px",
             }}
           >

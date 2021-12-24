@@ -1,70 +1,71 @@
 export let documents = [
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
+    courseDetails: "Includes java course docs",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
   {
     coursename: "Java",
-    material_link: "",
+    link: "",
   },
 ];

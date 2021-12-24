@@ -43,14 +43,17 @@ function App() {
         <Route exact path="/openings">
           <Openings setValue={setValue} />
         </Route>
+        <Route exact path="/about">
+          <About setValue={setValue} />
+        </Route>
+        <Route exact path="/documents">
+          <Document setValue={setValue} />
+        </Route>
         <Route exact path="/fresherswalkin">
           <FresherWalkin setValue={setValue} />
         </Route>
         <Route exact path="/experiencewalkin">
           <ExpWalkin setValue={setValue} />
-        </Route>
-        <Route exact path="/documents">
-          <Document setValue={setValue} />
         </Route>
       </Switch>
     </div>
