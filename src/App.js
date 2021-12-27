@@ -45,7 +45,7 @@ function App() {
         <Route exact path="/">
           <Home
             setValue={setValue}
-            testinomial_data={testinomial_data.slice(0, 5)}
+            testinomial_data={testinomial_data.slice(0, 8)}
           />
         </Route>
         <Route exact path="/openings">

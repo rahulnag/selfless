@@ -28,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
+    margin: "4px",
+    borderRadius: "4px",
   },
   expand: {
     transform: "rotate(0deg)",
@@ -68,7 +70,7 @@ export default function Testimonial({ testinomial_data }) {
                 md={4}
                 sm={12}
                 xs={12}
-                style={{ height: "550px", padding: "13px" }}
+                style={{ height: "450px", padding: "13px" }}
               >
                 <Card className={classes.root}>
                   <CardHeader
