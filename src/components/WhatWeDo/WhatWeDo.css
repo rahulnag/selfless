@@ -1,0 +1,26 @@
+.WhatWeDoGrid {
+  height: 200px;
+  /* wi/dth: 300px; */
+  padding: 15px;
+}
+.WhatWeDoPaper {
+  height: 100%;
+  /* width: 100%; */
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.NumberCount {
+  flex: 1;
+  background: rgb(94, 121, 97);
+  font-size: 97px;
+  border-radius: 4px;
+}
+.StepDetails {
+  flex: 3;
+  font-size: 25px;
+  text-align: center;
+  background: rgb(196, 214, 204);
+  border-radius: 4px;
+}

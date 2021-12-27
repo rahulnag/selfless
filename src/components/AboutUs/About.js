@@ -16,7 +16,7 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
-
+import WhatWeDo from "../WhatWeDo/WhatWeDo";
 import { aboutus } from "./about_data";
 import Loader from "../Loader/Loader";
 
@@ -57,6 +57,9 @@ function About({ setValue }) {
   return (
     <>
       <Grid container spacing={1}>
+        <Grid item>
+          <WhatWeDo />
+        </Grid>
         {aboutus.length > 0 ? (
           aboutus.map((elems) => {
             return (

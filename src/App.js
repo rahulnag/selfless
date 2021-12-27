@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Hidden } from "@material-ui/core";
@@ -15,6 +15,7 @@ import Openings from "./components/Openings/Openings";
 import Document from "./components/Documents/Document";
 import Testimonial from "./components/Testimonial/Testimonial";
 import { testinomial_data } from "./components/Testimonial/testinomial_data";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +34,14 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const [value, setValue] = React.useState(0);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("")
+      .then((response) => setData(response))
+      .catch((e) => console.error(e));
+  }, []);
 
   const classes = useStyles();
   return (
