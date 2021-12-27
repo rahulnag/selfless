@@ -16,6 +16,7 @@
   background: rgb(94, 121, 97);
   font-size: 97px;
   border-radius: 4px;
+  margin-right: 2px;
 }
 .StepDetails {
   flex: 3;

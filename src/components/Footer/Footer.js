@@ -21,6 +21,8 @@ function Footer() {
           backgroundColor: "rgb(238 249 246)",
           textAlign: "center",
           marginTop: "90px",
+          padding: "13px",
+          paddingBottom: "29px",
         }}
       >
         <p style={{ fontFamily: "Cursive", fontSize: "2rem" }}>
@@ -62,6 +64,12 @@ function Footer() {
           </a>
         </div>
         <p>Version 1.0</p>
+        <h4>
+          Website developed and managed by{" "}
+          <a target="_blank" href="https://www.capscode.in">
+            CapsCode
+          </a>
+        </h4>
       </div>
     </>
   );

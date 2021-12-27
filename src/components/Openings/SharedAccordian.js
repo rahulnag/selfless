@@ -6,6 +6,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import job from "./job";
+import Loader from "../Loader/Loader";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
@@ -64,7 +65,7 @@ export default function SharedAccordian({ data }) {
           </Accordion>
         ))
       ) : (
-        <h3>Loading...</h3>
+        <Loader />
       )}
     </div>
   );

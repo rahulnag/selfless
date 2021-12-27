@@ -42,12 +42,12 @@ const useStyles = makeStyles((theme) => ({
     // textAlign: "center",
     // marginTop: "20px",
     [theme.breakpoints.up("xs")]: {
-      fontSize: "3em",
+      fontSize: "4em",
       // color: 'green'
     },
 
     [theme.breakpoints.up("sm")]: {
-      fontSize: "3em",
+      fontSize: "4em",
       // color: 'blue'
     },
     [theme.breakpoints.between("sm", "md")]: {
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Home({ setValue, testinomial_data }) {
+function Home({ setValue, testimonial_data }) {
   const classes = useStyles();
   const history = useHistory();
   const F_Walkin = useCallback(() => history.push("/fresherswalkin"), [
@@ -70,7 +70,7 @@ function Home({ setValue, testinomial_data }) {
     history,
   ]);
 
-  //  openTestinomial (){
+  //  openTestimonial (){
   //   <Link to="/testimonial" className="NavLink">
   //     <Testimonial />
   //   </Link>;
@@ -144,23 +144,23 @@ function Home({ setValue, testinomial_data }) {
       </Grid>
 
       <WhatWeDo />
-      <Testimonial testinomial_data={testinomial_data} />
+      <Testimonial testimonial_data={testimonial_data} />
       <div>
         {/* <Button variant="contained" color="success">
           VIEW MORE
         </Button> */}
-        <Link to="/testinomial" className="NavLink">
+        <Link to="/testimonial" className="NavLink">
           {/* <Button
             variant="contained"
             color="primary"
             style={{ backgroundColor: "green" }}
-            // onClick={openTestinomial}
+            // onClick={openTestimonial}
           >
             VIEW MORE
           </Button> */}
           <button
             style={{
-              width: "130px",
+              minWidth: "130px",
               height: "50px",
               margin: "10px",
               background: "#0bdd9c",

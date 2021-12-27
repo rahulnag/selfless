@@ -17,8 +17,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
 import WhatWeDo from "../WhatWeDo/WhatWeDo";
-import { aboutus } from "./about_data";
 import Loader from "../Loader/Loader";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,17 +49,39 @@ const useStyles = makeStyles((theme) => ({
 
 function About({ setValue }) {
   const classes = useStyles();
-
+  const [aboutus, setAboutus] = useState([]);
   useEffect(() => {
     setValue(2);
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(
+        "https://raw.githubusercontent.com/SelflessFamily-Files/SelflessWebsiteFiles/master/AboutUs/about.json"
+      )
+      .then((response) => {
+        setAboutus(response.data);
+      })
+      .catch((e) => console.error(e));
+  }, []);
   return (
     <>
       <Grid container spacing={1}>
-        <Grid item>
+        <Grid item sm={12} xs={12} lg={12} md={12}>
           <WhatWeDo />
         </Grid>
+        <Grid item sm={12} xs={12} lg={12} md={12}>
+          <h1
+            style={{
+              textAlign: "center",
+              color: "rgb(0 144 99)",
+              fontSize: "50px",
+            }}
+          >
+            Our Team <span style={{ backgroundColor: "white" }}>👨🏻‍💻</span>
+          </h1>
+        </Grid>
+
         {aboutus.length > 0 ? (
           aboutus.map((elems) => {
             return (
@@ -78,7 +100,7 @@ function About({ setValue }) {
                         R
                       </Avatar>
                     }
-                    title={aboutus[0].name}
+                    title={elems.name}
                     subheader="September 14, 2016"
                   />
                   <CardMedia

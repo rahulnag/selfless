@@ -1,15 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
-import { documents } from "./documents";
+import axios from "axios";
 import "./Document.css";
-
+import Loader from "../Loader/Loader";
 const Document = ({ setValue }) => {
+  const [documents, setDocument] = useState([]);
   useEffect(() => {
     setValue(3);
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(
+        "https://raw.githubusercontent.com/SelflessFamily-Files/SelflessWebsiteFiles/master/Document/document.json"
+      )
+      .then((response) => {
+        setDocument(response.data);
+      })
+      .catch((e) => console.error(e));
+  }, []);
   return (
     <>
       <h2
@@ -22,6 +33,25 @@ const Document = ({ setValue }) => {
         Document Collection And Their Links
       </h2>
       <br />
+      <a target="_black" href="https://www.capscode.in">
+        <button
+          style={{
+            minWidth: "130px",
+            height: "50px",
+            margin: "10px",
+            background: "#0bdd9c",
+            border: "2px solid #1ba67b",
+            color: "white",
+            borderRadius: "4px",
+            fontSize: "1rem",
+            padding: "8px",
+            paddingBottom: "13px",
+          }}
+        >
+          Want to become a WEB DEVELOPER ?<br />
+          <span style={{ fontSize: "12px" }}>CLICK HERE ➜</span>
+        </button>
+      </a>
       <Grid container>
         {documents.length > 0 ? (
           documents.map((e) => {
@@ -46,7 +76,7 @@ const Document = ({ setValue }) => {
             );
           })
         ) : (
-          <h2>loading...</h2>
+          <Loader />
         )}
       </Grid>
       <br />
