@@ -16,6 +16,7 @@ import Document from "./components/Documents/Document";
 import Testimonial from "./components/Testimonial/Testimonial";
 import { testinomial_data } from "./components/Testimonial/testinomial_data";
 import axios from "axios";
+import Footer from "./components/Footer/Footer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,44 +46,49 @@ function App() {
 
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <CssBaseline />
-      <div>
-        <TopTab value={value} setValue={setValue} />
+    <>
+      <div className={classes.root}>
+        <CssBaseline />
+        <div>
+          <TopTab value={value} setValue={setValue} />
+        </div>
+        <Switch>
+          <div style={{ minHeight: "100vh" }}>
+            <Route exact path="/">
+              <Home
+                setValue={setValue}
+                testinomial_data={testinomial_data.slice(0, 8)}
+              />
+            </Route>
+            <Route exact path="/openings">
+              <Openings setValue={setValue} />
+            </Route>
+            <Route exact path="/aboutus">
+              <About setValue={setValue} />
+            </Route>
+            <Route exact path="/documents">
+              <Document setValue={setValue} />
+            </Route>
+            <Route exact path="/fresherswalkin">
+              <FresherWalkin setValue={setValue} />
+            </Route>
+            <Route exact path="/experiencewalkin">
+              <ExpWalkin setValue={setValue} />
+            </Route>
+            <Route exact path="/testinomial">
+              <Testimonial testinomial_data={testinomial_data} />
+            </Route>
+            <Route exact path="/experienceopenings">
+              <ExpOpening setValue={setValue} />
+            </Route>
+            <Route exact path="/freshersopenings">
+              <FreshersOpening setValue={setValue} />
+            </Route>
+          </div>
+        </Switch>
+        <Footer />
       </div>
-      <Switch>
-        <Route exact path="/">
-          <Home
-            setValue={setValue}
-            testinomial_data={testinomial_data.slice(0, 8)}
-          />
-        </Route>
-        <Route exact path="/openings">
-          <Openings setValue={setValue} />
-        </Route>
-        <Route exact path="/aboutus">
-          <About setValue={setValue} />
-        </Route>
-        <Route exact path="/documents">
-          <Document setValue={setValue} />
-        </Route>
-        <Route exact path="/fresherswalkin">
-          <FresherWalkin setValue={setValue} />
-        </Route>
-        <Route exact path="/experiencewalkin">
-          <ExpWalkin setValue={setValue} />
-        </Route>
-        <Route exact path="/testinomial">
-          <Testimonial testinomial_data={testinomial_data} />
-        </Route>
-        <Route exact path="/experienceopenings">
-          <ExpOpening setValue={setValue} />
-        </Route>
-        <Route exact path="/freshersopenings">
-          <FreshersOpening setValue={setValue} />
-        </Route>
-      </Switch>
-    </div>
+    </>
   );
 }
 
