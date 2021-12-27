@@ -11,7 +11,7 @@ export default function ExpOpening({ setValue }) {
   useEffect(() => {
     axios
       .get("")
-      .then((response) => setData(response))
+      .then((response) => setData(response.data))
       .catch((e) => console.error(e));
   }, []);
   return <SharedAccordian data={job} />;

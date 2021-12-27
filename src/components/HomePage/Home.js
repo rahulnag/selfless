@@ -17,36 +17,37 @@ import logo from "./../../assets/logo/selfless_high.png";
 import text from "../../main";
 import Testimonial from "../Testimonial/Testimonial";
 import { Button } from "@material-ui/core";
+import WhatWeDo from "../WhatWeDo/WhatWeDo";
 // import { Button } from "@material-ui/core";
 // import Testimonial from "../Testimonial/Testimonial";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: theme.spacing(1),
-    [theme.breakpoints.down("sm")]: {
-      marginTop: "50px",
-    },
-    [theme.breakpoints.up("md")]: {
-      marginTop: "60px",
-    },
-    [theme.breakpoints.up("lg")]: {
-      marginTop: "60px",
-    },
-  },
+  // root: {
+  //   padding: theme.spacing(1),
+  //   [theme.breakpoints.down("sm")]: {
+  //     marginTop: "50px",
+  //   },
+  //   [theme.breakpoints.up("md")]: {
+  //     marginTop: "60px",
+  //   },
+  //   [theme.breakpoints.up("lg")]: {
+  //     marginTop: "60px",
+  //   },
+  // },
   mainText: {
     color: "#2C3335",
     fontFamily: "cursive",
     textShadow: "2px 2px 5px #1ba67b",
     border: "#0bdd9c",
     // textAlign: "center",
-    marginTop: "20px",
+    // marginTop: "20px",
     [theme.breakpoints.up("xs")]: {
-      fontSize: "3em",
+      fontSize: "4em",
       // color: 'green'
     },
 
     [theme.breakpoints.up("sm")]: {
-      fontSize: "3em",
+      fontSize: "4em",
       // color: 'blue'
     },
     [theme.breakpoints.between("sm", "md")]: {
@@ -59,19 +60,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Home({ setValue, testinomial_data }) {
+function Home({ setValue, testimonial_data }) {
   const classes = useStyles();
   const history = useHistory();
-  const F_Walkin = useCallback(
-    () => history.push("/fresherswalkin"),
-    [history]
-  );
-  const E_Walkin = useCallback(
-    () => history.push("/experiencewalkin"),
-    [history]
-  );
+  const F_Walkin = useCallback(() => history.push("/fresherswalkin"), [
+    history,
+  ]);
+  const E_Walkin = useCallback(() => history.push("/experiencewalkin"), [
+    history,
+  ]);
 
-  //  openTestinomial (){
+  //  openTestimonial (){
   //   <Link to="/testimonial" className="NavLink">
   //     <Testimonial />
   //   </Link>;
@@ -85,20 +84,33 @@ function Home({ setValue, testinomial_data }) {
     <>
       <Grid
         container
-        style={
-          {
-            // backgroundImage: `url(${logo})`,
-            // backgroundRepeat: "no-repeat",
-            // backgroundSize: "500px 500px",
-            // backgroundPosition: "center",
-          }
-        }
+        style={{
+          marginBottom: "90px",
+          // backgroundImage: `url(${logo})`,
+          // backgroundRepeat: "no-repeat",
+          // backgroundSize: "500px 500px",
+          // backgroundPosition: "center",
+        }}
       >
-        <Grid xs={12} sm={12} md={6} lg={6} item>
+        <Grid
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
+          item
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           {" "}
-          <Typography className={classes.mainText}>
-            {text.homepageText}
-          </Typography>
+          <div>
+            <Typography className={classes.mainText}>
+              {text.homepageText}
+            </Typography>
+          </div>
           <div
             style={{
               color: "rgb(44 51 53 / 78%)",
@@ -111,7 +123,7 @@ function Home({ setValue, testinomial_data }) {
               marginTop: "16px",
             }}
           >
-            {text.hintText}
+            {text.hintText} 🌈
           </div>
         </Grid>
         <Grid
@@ -130,23 +142,25 @@ function Home({ setValue, testinomial_data }) {
           }}
         ></Grid>
       </Grid>
-      <Testimonial testinomial_data={testinomial_data} />
+
+      <WhatWeDo />
+      <Testimonial testimonial_data={testimonial_data} />
       <div>
         {/* <Button variant="contained" color="success">
           VIEW MORE
         </Button> */}
-        <Link to="/testinomial" className="NavLink">
+        <Link to="/testimonial" className="NavLink">
           {/* <Button
             variant="contained"
             color="primary"
             style={{ backgroundColor: "green" }}
-            // onClick={openTestinomial}
+            // onClick={openTestimonial}
           >
             VIEW MORE
           </Button> */}
           <button
             style={{
-              width: "130px",
+              minWidth: "130px",
               height: "50px",
               margin: "10px",
               background: "#0bdd9c",

@@ -16,7 +16,6 @@ import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import Grid from "@material-ui/core/Grid";
-// import { testinomial_data } from "./testinomial_data";
 import Loader from "../Loader/Loader";
 
 const useStyles = makeStyles((theme) => ({
@@ -46,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Testimonial({ testinomial_data }) {
+export default function Testimonial({ testimonial_data }) {
   const classes = useStyles();
 
   return (
@@ -56,13 +55,13 @@ export default function Testimonial({ testinomial_data }) {
         Our Achievements
       </h1>
       <h3 style={{ textAlign: "center", color: "rgb(0 144 99)" }}>
-        Since 2019, 5000+ students got placed after joining Selfless Family
+        Since 2018, 5000+ students got placed after joining Selfless Family
       </h3>
       {/* </div> */}
 
-      <Grid container spacing={1}>
-        {testinomial_data.length > 0 ? (
-          testinomial_data.map((elem) => {
+      <Grid container spacing={1} style={{ marginTop: "60px" }}>
+        {testimonial_data.length > 0 ? (
+          testimonial_data.map((elem) => {
             return (
               <Grid
                 item
@@ -85,7 +84,7 @@ export default function Testimonial({ testinomial_data }) {
                   <CardMedia
                     className={classes.media}
                     image={elem.image_url}
-                    title="Paella dish"
+                    title={elem.name}
                   />
                   <CardContent>
                     <Typography

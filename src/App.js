@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Hidden } from "@material-ui/core";
@@ -14,7 +14,7 @@ import About from "./components/AboutUs/About";
 import Openings from "./components/Openings/Openings";
 import Document from "./components/Documents/Document";
 import Testimonial from "./components/Testimonial/Testimonial";
-import { testinomial_data } from "./components/Testimonial/testinomial_data";
+import axios from "axios";
 import Footer from "./components/Footer/Footer";
 
 const useStyles = makeStyles((theme) => ({
@@ -34,6 +34,16 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const [value, setValue] = React.useState(0);
+  const [testimonial_data, setTestimonial_data] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://raw.githubusercontent.com/SelflessFamily-Files/SelflessWebsiteFiles/master/Testimonials/testimonial.json"
+      )
+      .then((response) => setTestimonial_data(response.data))
+      .catch((e) => console.error(e));
+  }, []);
 
   const classes = useStyles();
   return (
@@ -48,7 +58,7 @@ function App() {
             <Route exact path="/">
               <Home
                 setValue={setValue}
-                testinomial_data={testinomial_data.slice(0, 8)}
+                testimonial_data={testimonial_data.slice(0, 8)}
               />
             </Route>
             <Route exact path="/openings">
@@ -66,8 +76,8 @@ function App() {
             <Route exact path="/experiencewalkin">
               <ExpWalkin setValue={setValue} />
             </Route>
-            <Route exact path="/testinomial">
-              <Testimonial testinomial_data={testinomial_data} />
+            <Route exact path="/testimonial">
+              <Testimonial testimonial_data={testimonial_data} />
             </Route>
             <Route exact path="/experienceopenings">
               <ExpOpening setValue={setValue} />
