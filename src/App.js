@@ -8,6 +8,8 @@ import TopTab from "./components/TopNav";
 // import Footer from './components/Footer/Footer'
 import ExpWalkin from "./components/Walkins/ExpWalkin";
 import FresherWalkin from "./components/Walkins/FreshersWalkin";
+import ExpOpening from "./components/Openings/ExpOpening";
+import FreshersOpening from "./components/Openings/FreshersOpening";
 import About from "./components/AboutUs/About";
 import Openings from "./components/Openings/Openings";
 import Document from "./components/Documents/Document";
@@ -54,6 +56,12 @@ function App() {
         </Route>
         <Route exact path="/experiencewalkin">
           <ExpWalkin setValue={setValue} />
+        </Route>
+        <Route exact path="/experienceopenings">
+          <ExpOpening setValue={setValue} />
+        </Route>
+        <Route exact path="/freshersopenings">
+          <FreshersOpening setValue={setValue} />
         </Route>
       </Switch>
     </div>
