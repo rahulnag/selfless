@@ -45,24 +45,26 @@ export default function SharedAccordian({ data }) {
             <AccordionDetails>
               <Typography>{j.desc}</Typography>
             </AccordionDetails>
-            <button
-              style={{
-                float: "right",
-                width: "100px",
-                height: "30px",
-                margin: "10px",
-                background: "#0bdd9c",
-                border: "2px solid #1ba67b",
-                color: "white",
-                borderRadius: "4px",
-              }}
-            >
-              Click To Apply
-            </button>
+            <a href={j.link} target="_blank" style={{ textDecoration: "none" }}>
+              <button
+                style={{
+                  float: "right",
+                  width: "100px",
+                  height: "30px",
+                  margin: "10px",
+                  background: "#0bdd9c",
+                  border: "2px solid #1ba67b",
+                  color: "white",
+                  borderRadius: "4px",
+                }}
+              >
+                Click To Apply
+              </button>
+            </a>
           </Accordion>
         ))
       ) : (
-        <h3>Loading..</h3>
+        <h3>Loading...</h3>
       )}
     </div>
   );

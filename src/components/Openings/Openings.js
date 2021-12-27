@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     width: "auto",
     padding: "10px",
     fontSize: "2em",
-    color: "rgb(0 0 0 / 62%)",
+    color: "rgba(44, 51, 53, 0.78)",
   },
   control: {
     padding: theme.spacing(2),
