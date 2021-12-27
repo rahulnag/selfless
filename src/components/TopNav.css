@@ -7,9 +7,6 @@
   color: rgb(0 144 99);
   font-weight: bolder;
 }
-.PrivateTabIndicator-colorPrimary-4 {
-  background-color: #12aa04 !important;
-}
-.PrivateTabIndicator-colorPrimary-11 {
+.MuiTabs-indicator {
   background-color: #12aa04 !important;
 }
