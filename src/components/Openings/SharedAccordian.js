@@ -51,6 +51,10 @@ export default function SharedAccordian({ data }) {
                 width: "100px",
                 height: "30px",
                 margin: "10px",
+                background: "#0bdd9c",
+                border: "2px solid #1ba67b",
+                color: "white",
+                borderRadius: "4px",
               }}
             >
               Click To Apply
