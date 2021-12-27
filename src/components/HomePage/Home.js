@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { Card } from "@material-ui/core";
+// import { Button, Card } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 import backimage from "./wave.svg";
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 
 import { Link } from "react-router-dom";
@@ -18,6 +18,10 @@ import homeimage from "./../../assets/Recruitment.png";
 import logo from "./../../assets/logo/selfless_high.png";
 import text from "../../main";
 import Testimonial from "../Testimonial/Testimonial";
+import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
+// import Testimonial from "../Testimonial/Testimonial";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(1),
@@ -57,18 +61,28 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Home({ setValue }) {
+function Home({ setValue, testinomial_data }) {
   const classes = useStyles();
   const history = useHistory();
-  const F_Walkin = useCallback(() => history.push("/fresherswalkin"), [
-    history,
-  ]);
-  const E_Walkin = useCallback(() => history.push("/experiencewalkin"), [
-    history,
-  ]);
+  const F_Walkin = useCallback(
+    () => history.push("/fresherswalkin"),
+    [history]
+  );
+  const E_Walkin = useCallback(
+    () => history.push("/experiencewalkin"),
+    [history]
+  );
+
+  //  openTestinomial (){
+  //   <Link to="/testimonial" className="NavLink">
+  //     <Testimonial />
+  //   </Link>;
+  // };
+
   useEffect(() => {
     setValue(0);
   }, []);
+
   return (
     <>
       <Grid
@@ -118,7 +132,22 @@ function Home({ setValue }) {
           }}
         ></Grid>
       </Grid>
-      <Testimonial />
+      <Testimonial testinomial_data={testinomial_data} />
+      <div>
+        {/* <Button variant="contained" color="success">
+          VIEW MORE
+        </Button> */}
+        <Link to="/testinomial" className="NavLink">
+          <Button
+            variant="contained"
+            color="primary"
+            style={{ backgroundColor: "green" }}
+            // onClick={openTestinomial}
+          >
+            VIEW MORE
+          </Button>
+        </Link>
+      </div>
     </>
   );
 }

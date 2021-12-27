@@ -15,11 +15,15 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import Grid from "@material-ui/core/Grid";
+// import { testinomial_data } from "./testinomial_data";
+import Loader from "../Loader/Loader";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 300,
-    maxHeight: 400,
+    // maxWidth: 300,
+    // maxHeight: 400,
+    height: "100%",
   },
   media: {
     height: 0,
@@ -40,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Testimonial() {
+export default function Testimonial({ testinomial_data }) {
   const classes = useStyles();
 
   return (
@@ -53,29 +57,53 @@ export default function Testimonial() {
         Since 2019, 5000+ students got placed after joining Selfless Family
       </h3>
       {/* </div> */}
-      <Card className={classes.root}>
-        <CardHeader
-          avatar={
-            <Avatar aria-label="recipe" className={classes.avatar}>
-              R
-            </Avatar>
-          }
-          title="Shrimp and Chorizo Paella"
-          subheader="September 14, 2016"
-        />
-        <CardMedia
-          className={classes.media}
-          image="/static/images/cards/paella.jpg"
-          title="Paella dish"
-        />
-        <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            This impressive paella is a perfect party dish and a fun meal to
-            cook together with your guests. Add 1 cup of frozen peas along with
-            the mussels, if you like.
-          </Typography>
-        </CardContent>
-      </Card>
+
+      <Grid container spacing={1}>
+        {testinomial_data.length > 0 ? (
+          testinomial_data.map((elem) => {
+            return (
+              <Grid
+                item
+                lg={3}
+                md={4}
+                sm={12}
+                xs={12}
+                style={{ height: "550px", padding: "13px" }}
+              >
+                <Card className={classes.root}>
+                  <CardHeader
+                    // avatar={
+                    //   <Avatar aria-label="recipe" className={classes.avatar}>
+                    //     R
+                    //   </Avatar>
+                    // }
+                    title={elem.name}
+                    subheader={elem.desc}
+                  />
+                  <CardMedia
+                    className={classes.media}
+                    image={elem.image_url}
+                    title="Paella dish"
+                  />
+                  <CardContent>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      This impressive paella is a perfect party dish and a fun
+                      meal to cook together with your guests. Add 1 cup of
+                      frozen peas along with the mussels, if you like.
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            );
+          })
+        ) : (
+          <Loader />
+        )}
+      </Grid>
     </>
   );
 }
