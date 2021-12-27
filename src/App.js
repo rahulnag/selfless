@@ -13,6 +13,9 @@ import FreshersOpening from "./components/Openings/FreshersOpening";
 import About from "./components/AboutUs/About";
 import Openings from "./components/Openings/Openings";
 import Document from "./components/Documents/Document";
+import Testimonial from "./components/Testimonial/Testimonial";
+import { testinomial_data } from "./components/Testimonial/testinomial_data";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(1),
@@ -40,12 +43,15 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/">
-          <Home setValue={setValue} />
+          <Home
+            setValue={setValue}
+            testinomial_data={testinomial_data.slice(0, 5)}
+          />
         </Route>
         <Route exact path="/openings">
           <Openings setValue={setValue} />
         </Route>
-        <Route exact path="/about">
+        <Route exact path="/aboutus">
           <About setValue={setValue} />
         </Route>
         <Route exact path="/documents">
@@ -56,6 +62,9 @@ function App() {
         </Route>
         <Route exact path="/experiencewalkin">
           <ExpWalkin setValue={setValue} />
+        </Route>
+        <Route exact path="/testinomial">
+          <Testimonial testinomial_data={testinomial_data} />
         </Route>
         <Route exact path="/experienceopenings">
           <ExpOpening setValue={setValue} />
