@@ -7,7 +7,7 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
 import { useHistory } from "react-router-dom";
-
+import "./Openings.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -29,22 +29,18 @@ export default function Openings({ setValue }) {
 
   const classes = useStyles();
   const history = useHistory();
-  const F_Walkin = useCallback(
-    () => history.push("/fresherswalkin"),
-    [history]
-  );
-  const E_Walkin = useCallback(
-    () => history.push("/experiencewalkin"),
-    [history]
-  );
-  const F_Openings = useCallback(
-    () => history.push("/freshersopenings"),
-    [history]
-  );
-  const E_Openings = useCallback(
-    () => history.push("/experienceopenings"),
-    [history]
-  );
+  const F_Walkin = useCallback(() => history.push("/fresherswalkin"), [
+    history,
+  ]);
+  const E_Walkin = useCallback(() => history.push("/experiencewalkin"), [
+    history,
+  ]);
+  const F_Openings = useCallback(() => history.push("/freshersopenings"), [
+    history,
+  ]);
+  const E_Openings = useCallback(() => history.push("/experienceopenings"), [
+    history,
+  ]);
 
   const handleChange = (event) => {
     setSpacing(Number(event.target.value));
@@ -63,58 +59,29 @@ export default function Openings({ setValue }) {
         xs={12}
         style={{
           borderRadius: "10px",
-          backgroundColor: "lightGrey",
+          backgroundColor: "white",
           margin: "10px",
           padding: "10px",
-        }}
-        onClick={() => {
-          F_Walkin();
-        }}
-      >
-        <Paper lg={5.5} md={5} sm={12} xs={12} className={classes.paper}>
-          Freshers Daily Walkin List
-        </Paper>
-      </Grid>
-
-      <Grid
-        align="center"
-        lg={5.5}
-        md={5}
-        sm={12}
-        xs={12}
-        style={{
-          borderRadius: "10px",
-          backgroundColor: "lightGrey",
-          margin: "10px",
-          padding: "10px",
-        }}
-        onClick={() => {
-          E_Walkin();
-        }}
-      >
-        <Paper lg={5.5} md={5} sm={12} xs={12} className={classes.paper}>
-          Experienced Daily Walkin List
-        </Paper>
-      </Grid>
-
-      <Grid
-        align="center"
-        lg={5.5}
-        md={5}
-        sm={12}
-        xs={12}
-        style={{
-          borderRadius: "10px",
-          backgroundColor: "lightGrey",
-          margin: "10px",
-          padding: "10px",
+          boxShadow: "0px 3px 24px -3px rgba(0,0,0,0.75)",
         }}
         onClick={() => {
           F_Openings();
         }}
       >
-        <Paper lg={5.5} md={5} sm={12} xs={12} className={classes.paper}>
+        <Paper
+          lg={5.5}
+          md={5}
+          sm={12}
+          xs={12}
+          className={classes.paper}
+          elevation={0}
+        >
           Freshers Openings
+          <br />
+          <p className="OpeningDescription">
+            Click here to get the huge list of Opening for Freshers in multiple
+            positions across India
+          </p>
         </Paper>
       </Grid>
 
@@ -126,16 +93,96 @@ export default function Openings({ setValue }) {
         xs={12}
         style={{
           borderRadius: "10px",
-          backgroundColor: "lightGrey",
+          backgroundColor: "white",
           margin: "10px",
           padding: "10px",
+          boxShadow: "0px 3px 24px -3px rgba(0,0,0,0.75)",
         }}
         onClick={() => {
           E_Openings();
         }}
       >
-        <Paper lg={5.5} md={5} sm={12} xs={12} className={classes.paper}>
+        <Paper
+          lg={5.5}
+          md={5}
+          sm={12}
+          xs={12}
+          className={classes.paper}
+          elevation={0}
+        >
           Experienced Openings
+          <br />
+          <p className="OpeningDescription">
+            Click here to get the huge list of Opening for Experienced in
+            multiple positions across India
+          </p>
+        </Paper>
+      </Grid>
+      <Grid
+        align="center"
+        lg={5.5}
+        md={5}
+        sm={12}
+        xs={12}
+        style={{
+          borderRadius: "10px",
+          margin: "10px",
+          padding: "10px",
+          boxShadow: "0px 3px 24px -3px rgba(0,0,0,0.75)",
+          backgroundColor: "white",
+        }}
+        onClick={() => {
+          F_Walkin();
+        }}
+      >
+        <Paper
+          lg={5.5}
+          md={5}
+          sm={12}
+          xs={12}
+          className={classes.paper}
+          elevation={0}
+        >
+          Freshers Daily Walkin List
+          <br />
+          <p className="OpeningDescription">
+            Click here to get the huge list of Daily Walkins for Freshers across
+            India
+          </p>
+        </Paper>
+      </Grid>
+
+      <Grid
+        align="center"
+        lg={5.5}
+        md={5}
+        sm={12}
+        xs={12}
+        style={{
+          borderRadius: "10px",
+          backgroundColor: "white",
+          margin: "10px",
+          padding: "10px",
+          boxShadow: "0px 3px 24px -3px rgba(0,0,0,0.75)",
+        }}
+        onClick={() => {
+          E_Walkin();
+        }}
+      >
+        <Paper
+          lg={5.5}
+          md={5}
+          sm={12}
+          xs={12}
+          className={classes.paper}
+          elevation={0}
+        >
+          Experienced Daily Walkin List
+          <br />
+          <p className="OpeningDescription">
+            Click here to get the huge list of Daily Walkins for Experienced
+            across India{" "}
+          </p>
         </Paper>
       </Grid>
     </Grid>
