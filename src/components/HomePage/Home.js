@@ -7,13 +7,11 @@ import backimage from "./wave.svg";
 import { makeStyles } from "@material-ui/core/styles";
 // import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
-
 import { Link } from "react-router-dom";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import About from "../AboutUs/About";
 import { useHistory } from "react-router-dom";
-
 import homeimage from "./../../assets/Recruitment.png";
 import logo from "./../../assets/logo/selfless_high.png";
 import text from "../../main";
@@ -138,14 +136,28 @@ function Home({ setValue, testinomial_data }) {
           VIEW MORE
         </Button> */}
         <Link to="/testinomial" className="NavLink">
-          <Button
+          {/* <Button
             variant="contained"
             color="primary"
             style={{ backgroundColor: "green" }}
             // onClick={openTestinomial}
           >
             VIEW MORE
-          </Button>
+          </Button> */}
+          <button
+            style={{
+              width: "130px",
+              height: "50px",
+              margin: "10px",
+              background: "#0bdd9c",
+              border: "2px solid #1ba67b",
+              color: "white",
+              borderRadius: "4px",
+              fontSize: "1rem",
+            }}
+          >
+            VIEW MORE ➜
+          </button>
         </Link>
       </div>
     </>

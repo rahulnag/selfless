@@ -1,0 +1,45 @@
+a.social {
+  margin: 0.5rem;
+  transition: transform 280ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-10px);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #3b5998;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: rgb(170, 11, 136);
+}
+
+a.telegram {
+  color: rgb(53, 100, 231);
+}
+
+a.linkedin {
+  color: #0e76a8;
+}
+
+a.whatsapp {
+  color: green;
+}
+
+a.github {
+  color: white;
+}
+
+a.gmail {
+  color: #b23121;
+}
