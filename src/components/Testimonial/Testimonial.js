@@ -69,7 +69,7 @@ export default function Testimonial({ testimonial_data }) {
                 md={4}
                 sm={12}
                 xs={12}
-                style={{ height: "450px", padding: "13px" }}
+                style={{ height: "auto", padding: "13px" }}
               >
                 <Card className={classes.root}>
                   <CardHeader
@@ -87,7 +87,7 @@ export default function Testimonial({ testimonial_data }) {
                     title={elem.name}
                   />
                   <CardContent>
-                    <Typography
+                    {/* <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
@@ -95,7 +95,7 @@ export default function Testimonial({ testimonial_data }) {
                       This impressive paella is a perfect party dish and a fun
                       meal to cook together with your guests. Add 1 cup of
                       frozen peas along with the mussels, if you like.
-                    </Typography>
+                    </Typography> */}
                   </CardContent>
                 </Card>
               </Grid>

@@ -6,7 +6,6 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import SharedAccordian from "../Openings/SharedAccordian";
-import job from "../Openings/job";
 export default function FreshersWalkin({ setValue }) {
   useEffect(() => {
     setValue(1);

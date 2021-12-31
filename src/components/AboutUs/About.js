@@ -91,7 +91,8 @@ function About({ setValue }) {
                 md={4}
                 sm={12}
                 xs={12}
-                style={{ height: "550px", padding: "13px" }}
+                style={{ height: "150px", padding: "13px" }}
+                //keep heignt as 550px
               >
                 <Card className={classes.root}>
                   <CardHeader
@@ -101,25 +102,22 @@ function About({ setValue }) {
                       </Avatar>
                     }
                     title={elems.name}
-                    subheader="September 14, 2016"
+                    subheader={elems.position}
                   />
-                  <CardMedia
+                  {/* <CardMedia
                     className={classes.media}
                     image={elems.image_url}
-                    title="Paella dish"
-                  />
-                  <CardContent>
+                    title={elems.name}
+                  /> */}
+                  {/* <CardContent>
                     <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
                     >
-                      {elems.name}
-                      {/* This impressive paella is a perfect party dish and a fun meal to
-                cook together with your guests. Add 1 cup of frozen peas along
-                with the mussels, if you like. */}
+                      {elems.desc}
                     </Typography>
-                  </CardContent>
+                  </CardContent> */}
                 </Card>
               </Grid>
             );
