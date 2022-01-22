@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const [value, setValue] = React.useState(0);
   const [testimonial_data, setTestimonial_data] = useState([]);
-
+  var date1 = new Date();
+  var date = new Date();
   useEffect(() => {
     axios
       .get(
@@ -48,6 +49,12 @@ function App() {
   const classes = useStyles();
   return (
     <>
+      {/* {console.log(
+        new Date().toString() >=
+          "Sat Jan 01 2022 00:00:00 GMT+0530 (India Standard Time)"
+      )} */}
+      {/* {new Date().toString() >=
+      "Sat Jan 01 2022 00:00:00 GMT+0530 (India Standard Time)" ? ( */}
       <div className={classes.root}>
         <CssBaseline />
         <div>
@@ -89,6 +96,12 @@ function App() {
         </Switch>
         <Footer />
       </div>
+      {/* ) : (
+        <div style={{ textAlign: "center" }}>
+          <h1>I will be ariving tomorrow, Stay tuned</h1>
+          <h1>Happy New Year</h1>
+        </div>
+      )} */}
     </>
   );
 }

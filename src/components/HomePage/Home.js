@@ -43,19 +43,24 @@ const useStyles = makeStyles((theme) => ({
     // marginTop: "20px",
     [theme.breakpoints.up("xs")]: {
       fontSize: "4em",
-      // color: 'green'
+      fontWeight: "bolder",
+      textAlign: "center",
+      // color: "green",
     },
 
     [theme.breakpoints.up("sm")]: {
       fontSize: "4em",
-      // color: 'blue'
+      textAlign: "left",
+      // color: "blue",
     },
     [theme.breakpoints.between("sm", "md")]: {
       fontSize: "4em",
-      // color: 'red'
+      textAlign: "left",
+      // color: "red",
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: "5em",
+      textAlign: "left",
     },
   },
 }));

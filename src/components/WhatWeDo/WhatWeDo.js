@@ -53,7 +53,7 @@ const WhatWeDo = () => {
             <Paper className="WhatWeDoPaper">
               <div className="NumberCount">1.</div>
               <div className="StepDetails">
-                JOIN SEFLESS FAMILY
+                JOIN SELFLESS FAMILY
                 <br />
                 <span style={{ fontSize: "0.8rem" }}>Click To Join ➜</span>
               </div>
